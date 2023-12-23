@@ -1,4 +1,7 @@
 .SecondPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: auto;
     margin: 0px;
@@ -12,7 +15,7 @@
     height: 131px;
     margin: 0px;
     padding: 0px;
-    background: rgba(152, 228, 245, 0.60);
+    background: #fff;
     backdrop-filter: blur(2px);
     border: none;
 }

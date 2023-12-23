@@ -1,45 +1,71 @@
-import React, {useContext, useRef} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import "./Example.css"
 import pic1 from "./Person.svg"
-import { MyContext } from "./ThridBlock";
+import { Context } from "./ThridBlock";
 
-function PasportBlock(props) {
+function PasportBlock() {
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const ref3 = useRef(null)
     const ref4 = useRef(null)
     const ref5 = useRef(null)
     const ref6 = useRef(null)
+    const tmp = useContext(Context)
 
-    const tmp = useContext(MyContext)
+    useEffect(() => {
+        if(tmp == 0) {
+            if(ref1.current.classList.contains("PersonInfoText3")) {
+                ref1.current.classList.remove("PersonInfoText3")
+            }
+            ref1.current.classList.add("PersonInfoText")
+            if(ref2.current.classList.contains("PersonInfoText3")) {
+                ref2.current.classList.remove("PersonInfoText3")
+            }
+            ref2.current.classList.add("PersonInfoText")
+            if(ref3.current.classList.contains("PersonInfoText3")) {
+                ref3.current.classList.remove("PersonInfoText3")
+            }
+            ref3.current.classList.add("PersonInfoText")
+            if(ref4.current.classList.contains("PersonInfoText3")) {
+                ref4.current.classList.remove("PersonInfoText3")
+            }
+            ref4.current.classList.add("PersonInfoText")
+            if(ref5.current.classList.contains("PersonInfoText3")) {
+                ref5.current.classList.remove("PersonInfoText3")
+            }
+            ref5.current.classList.add("PersonInfoText")
+            if(ref6.current.classList.contains("PersonInfoText3")) {
+                ref6.current.classList.remove("PersonInfoText3")
+            }
+            ref6.current.classList.add("PersonInfoText")
+        } else {
+            if(ref1.current.classList.contains("PersonInfoText")) {
+                ref1.current.classList.remove("PersonInfoText")
+            }
+            ref1.current.classList.add("PersonInfoText3")
+            if(ref2.current.classList.contains("PersonInfoText")) {
+                ref2.current.classList.remove("PersonInfoText")
+            }
+            ref2.current.classList.add("PersonInfoText3")
+            if(ref3.current.classList.contains("PersonInfoText")) {
+                ref3.current.classList.remove("PersonInfoText")
+            }
+            ref3.current.classList.add("PersonInfoText3")
+            if(ref4.current.classList.contains("PersonInfoText")) {
+                ref4.current.classList.remove("PersonInfoText")
+            }
+            ref4.current.classList.add("PersonInfoText3")
+            if(ref5.current.classList.contains("PersonInfoText")) {
+                ref5.current.classList.remove("PersonInfoText")
+            }
+            ref5.current.classList.add("PersonInfoText3")
+            if(ref6.current.classList.contains("PersonInfoText")) {
+                ref6.current.classList.remove("PersonInfoText")
+            }
+            ref6.current.classList.add("PersonInfoText3")
+        }
+    }, [tmp])
 
-    if(tmp == 0) {
-        ref1.current.classList.add("PersonInfoText")
-        ref1.current.classList.remove("PersonInfoTex3")
-        ref2.current.classList.add("PersonInfoText")
-        ref2.current.classList.remove("PersonInfoTex3")
-        ref3.current.classList.add("PersonInfoText")
-        ref3.current.classList.remove("PersonInfoText3")
-        ref4.current.classList.add("PersonInfoText")
-        ref4.current.classList.remove("PersonInfoText3")
-        ref5.current.classList.add("PersonInfoText")
-        ref5.current.classList.remove("PersonInfoText3")
-        ref6.current.classList.add("PersonInfoText")
-        ref6.current.classList.remove("PersonInfoText3")
-    } else {
-        ref1.current.classList.add("PersonInfoText3")
-        ref1.current.classList.remove("PersonInfoText")
-        ref2.current.classList.add("PersonInfoText3")
-        ref2.current.classList.remove("PersonInfoText")
-        ref3.current.classList.add("PersonInfoText3")
-        ref3.current.classList.remove("PersonInfoText")
-        ref4.current.classList.add("PersonInfoText3")
-        ref4.current.classList.remove("PersonInfoText")
-        ref5.current.classList.add("PersonInfoText3")
-        ref5.current.classList.remove("PersonInfoText")
-        ref6.current.classList.add("PersonInfoText3")
-        ref6.current.classList.remove("PersonInfoText")
-    }
     
     return(
         <div className="PasportBlock">

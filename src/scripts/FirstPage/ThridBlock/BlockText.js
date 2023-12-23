@@ -7,15 +7,12 @@ function BlockText() {
     const ref2 = useRef(null)
     const [tmp,setTmp] = useState(0)
 
-
     function ShowText() {
         if(tmp == 0) {
             setTmp(1)
             ref1.current.classList.add('txt23')
             ref1.current.classList.remove('txt33')
             
-            
-
             setInterval(() => {
                 ref2.current.classList.add('txt23')
                 ref2.current.classList.remove('txt33')
@@ -24,13 +21,8 @@ function BlockText() {
             setInterval(() => {
                 ref3.current.classList.add('txt23')
                 ref3.current.classList.remove('txt33')
-            }, 500)
-
-            
-            
-            
+            }, 500)          
         }
-
     }
 
     return (

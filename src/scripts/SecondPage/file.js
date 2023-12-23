@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import "../styles/file.css"
+import "./file.css"
 
 
 
@@ -19,7 +19,8 @@ function InputFile(props) {
 
     return(
         <div className="blockFile">
-            <input className="fileInput" type="file" onChange={ShowFile} ref={file}/>
+            <input className="fileInput" type="file" onChange={ShowFile} id="fileInput" ref={file}/>
+            <label for="fileInput" className="FileLabel" onClick={() => {file.current.focus()}}>Добавить файл</label>
         </div>
     )
 }

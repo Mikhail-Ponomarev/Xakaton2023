@@ -9,7 +9,6 @@ function ExampleHide(props) {
     return(
         <div className="ExampleHide">
             <PasportBlock />
-
         </div>
     )
 }
