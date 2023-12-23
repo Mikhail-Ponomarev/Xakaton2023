@@ -1,0 +1,68 @@
+.SecondBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background: #090909;
+    padding-top: 297px;
+    padding-right: 326px;
+    padding-bottom: 298px;
+}
+
+.ConstTxt {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.white {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.white_red {
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    animation-name: AnimeTxt;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes AnimeTxt {
+    from {
+        font-size: 60px;
+        color: #FFF;
+    } to {
+        color: #FF3434;
+        font-size: 88.966px;
+    }
+}

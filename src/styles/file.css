@@ -1,0 +1,13 @@
+.blockFile {
+    margin: 50px;
+    padding: 5px;
+    width: 370px;
+    height: 55px;
+    border: solid;
+}
+  
+.fileInput {
+    margin: 5px;
+    width: 60%;
+    height: 40%;
+}
