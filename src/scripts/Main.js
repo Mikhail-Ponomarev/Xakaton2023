@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import FirstPage from "./FirstPage/FirstPage";
 import SecondPage from "./SecondPage/SecondPage";
+import InputFile from "./file";
 const MyContext = React.createContext(0);
 
 function Main(props) {
@@ -15,7 +16,7 @@ function Main(props) {
                 <FirstPage />
             </MyContext.Provider>
         )
-    } else  {
+    } else if (value == 1) {
         return(
             <MyContext.Provider value={setValue}>
                 <SecondPage />

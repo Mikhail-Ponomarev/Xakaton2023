@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./SecondBlockStyles.css"
 
 function ChangeTxt() {
-    const [contentIndex, setContentIndex] = useState(0)
-    
-
-    const mass = [{content: 'ПАСПОРТ', color: 'white'}, {content: 'СНИЛС', color: 'white'},
-    {content: 'ВОДИТЕЛЬСКИЕ ПРАВА', color: 'white'}, {content: 'ДОКУМЕНТЫ', color: 'white'}, {content: 'ЧТО УГОДНО', color: 'white_red'}]
+    const ref = useRef(null);
 
     useEffect(() => {
-        if(contentIndex < 4) {
-            const interval = setInterval(() => {
-                setContentIndex((contentIndex + 1) % 5);
-              }, 2000);
-          
-              return () => clearInterval(interval);
-        }
+        const interval = setInterval(() => {
+            ref.current.classList.add('white_red')
+          }, 5500);
       
-    }, [contentIndex])
+        return () => clearInterval(interval);
+    }, [])
 
     return(
-        <p className={mass[contentIndex].color}> <br/> {mass[contentIndex].content}</p>
+        <ul className="txtBlock">
+            <div className="block">
+                <li className="white">ПАСПОРТ</li>
+                <li className="white">СНИЛС</li>
+                <li className="white">ВОДИТЕЛЬСКИЕ ПРАВА</li>
+                <li className="white">ДОКУМЕНТЫ</li>
+                <li className="white" ref={ref}>ЧТО УГОДНО</li>
+            </div>
+        </ul>
     )
 
 }

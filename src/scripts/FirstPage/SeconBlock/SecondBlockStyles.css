@@ -66,3 +66,46 @@
         font-size: 88.966px;
     }
 }
+
+.txtBlock {
+    display: block;
+    width: auto;
+    height: 94px;
+    overflow: hidden;
+}
+
+.white {
+    display: inline-block;
+    width: auto;
+    height: 65px;
+    margin-bottom: 5px;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    animation-name: TxtUp;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes TxtUp {
+    0% {
+        transform: translateY(0px);
+    } 25% {
+        transform: translateY(-65px);
+    } 50% {
+        transform: translateY(-130px);
+    } 75% {
+        transform: translateY(-185px);
+    } 100% {
+        transform: translateY(-275px);
+    }   
+}

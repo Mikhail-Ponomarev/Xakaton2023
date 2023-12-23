@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header/Header"
 import SecondBlock from "./SeconBlock/SecondBlock";
+import ThridBlock from "./ThridBlock/ThridBlock";
 import "./FirstPageStyles.css"
 
 function FirstPage() {
@@ -8,6 +9,7 @@ function FirstPage() {
         <div className="main">
             <Header />
             <SecondBlock />
+            <ThridBlock />
         </div>
     )
 }

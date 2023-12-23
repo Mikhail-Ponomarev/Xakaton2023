@@ -12,7 +12,6 @@ function LeftBar() {
 
     useEffect(() => {
         setTmp( (tmp + 1) % 28)
-        console.log(tmp)
         if(tmp == 15) {
             setFlag2(true)
         } else if (tmp  == 0) {
