@@ -12,11 +12,23 @@ function BlockText() {
         if(tmp == 0) {
             setTmp(1)
             ref1.current.classList.add('txt23')
-            ref2.current.classList.add('txt23')
-            ref3.current.classList.add('txt23')
             ref1.current.classList.remove('txt33')
-            ref2.current.classList.remove('txt33')
-            ref3.current.classList.remove('txt33')
+            
+            
+
+            setInterval(() => {
+                ref2.current.classList.add('txt23')
+                ref2.current.classList.remove('txt33')
+            }, 500)
+
+            setInterval(() => {
+                ref3.current.classList.add('txt23')
+                ref3.current.classList.remove('txt33')
+            }, 500)
+
+            
+            
+            
         }
 
     }

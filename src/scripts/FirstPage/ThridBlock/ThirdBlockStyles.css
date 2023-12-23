@@ -1,5 +1,6 @@
 .ThridBlock {
     display: block;
+    position: relative;
     width: 100%;
     height: auto;
     padding: 0px;
@@ -49,7 +50,7 @@
     transform: translateY(100px);
     margin: 0px;
     padding: 0px;
-    color: rgb(30, 29, 29);
+    color: #000;
     font-family: Inter;
     font-size: 68.801px;
     font-style: normal;
@@ -67,7 +68,7 @@
     transform: translateY(100px);
     margin: 0px;
     padding: 0px;
-    color: rgb(30, 29, 29);
+    color: #000;
     font-family: Inter;
     font-size: 68.801px;
     font-style: normal;
@@ -87,4 +88,41 @@
     } 100% {
         transform: translateY(0px);
     }
+}
+
+.TwoButtons {
+    position: absolute;
+    top: 60px;
+    left: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: #ABABAB;
+    margin-top: 397px;
+}
+
+.Data {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 30px;
+}
+
+.bg1 {
+    background: #DFDFDF;
+}
+
+.bg2 {
+    background: #ABABAB;
+}
+
+.picData {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
