@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react"
 import "./file.css"
 
-
-
 function InputFile(props) {
     const [data, setData] = useState(null)
+    const [binUrl, setBinUrl] = useState(null)
+    const [pdfUrl, setPdfUrl] = useState('');
+
 
     function ShowFile(event) {
         setData(event.target.files[0])
@@ -14,23 +15,20 @@ function InputFile(props) {
         event.preventDefault()
         const formData = new FormData()
         formData.append('file_upload', data)
-        
         try {
             const endpoint = 'http://127.0.0.1:8000/upload_file/document'
-            const responce = await fetch(endpoint, {
+            await fetch(endpoint, {
                 method: 'POST',
                 headers: {
-                    accept: 'application/json',
-                    'Content-Type': 'multipart/form-data'
+                    'Access-Control-Allow-Credentials': true
                 },
                 body: formData
+            }).then(response => response.blob())
+            .then(blob => {
+              const url = new Blob([blob]);
+              setBinUrl(url);
+              console.log(url)
             })
-
-            if(responce.ok) {
-                console.log('Ok!')
-            } else {
-                console.log('Problems')
-            }
 
         } catch(error) {
             console.error(error)
@@ -39,6 +37,21 @@ function InputFile(props) {
 
     const file = useRef(null)
 
+    const convertToPdf = () => {
+        if (binUrl) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const blob = new Blob([data], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            setPdfUrl(url)
+            // window.open(url);
+          };
+          reader.readAsArrayBuffer(binUrl);
+        }
+      };
+    
+
     return(
         <div className="blockFile">
             <form onSubmit={SubmitFrom}>
@@ -46,6 +59,12 @@ function InputFile(props) {
                 <label for="fileInput" className="FileLabel" onClick={() => {file.current.focus()}}>Добавить файл</label>
                 <button type="submit" className="btn">Загрузить файл</button>
             </form>
+            <div className="getData">
+                <h2>Загрузка файла из REST API</h2>
+                <button onClick={convertToPdf}>Скачать файл</button>
+                {pdfUrl && <a href={pdfUrl} download="file">Нажмите здесь для скачивания файла</a>}
+            </div>
+
         </div>
     )
 }

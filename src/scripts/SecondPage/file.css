@@ -40,3 +40,8 @@
     top: 150px;
     margin-top: 20px;
 }
+
+.getData {
+    position: absolute;
+    top: 300px
+}
