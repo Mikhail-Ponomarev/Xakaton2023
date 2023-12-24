@@ -23,7 +23,7 @@
 .FilesTxt {
     display: flex;
     flex-direction: column;
-    margin-top: 31px;
+    margin-top: 271px;
     width: 100%;
     height: auto;
     justify-content: center;
@@ -60,4 +60,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.SecondPageText2 {
+    display: inline-block;
+    margin-top: 60px;
 }

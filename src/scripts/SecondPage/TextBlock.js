@@ -1,26 +1,24 @@
 import React from "react";
 import "./SeconPageStyles.css"
 
-function TextBlock() {
+function TextBlock(props) {
+    const func = props.func
+
     return(
         <div className="FilesTxt">
             <p className="types">Выберите тип документа</p>
             <div className="formBlock">
                 <div className="radioBlock">
-                    <input type="radio" name="FileType" id="pasport" className="radio" />
-                    <label for="pasport" className="radioLable">Паспорт</label>
+                    <input type="radio" name="FileType" id="pasport" className="radio" onClick={() => func(0)}/>
+                    <label for="pasport" className="radioLable">Водительские права</label>
                 </div>
                 <div className="radioBlock">
-                    <input type="radio" name="FileType" id="snils" className="radio" />
+                    <input type="radio" name="FileType" id="snils" className="radio" onClick={() => func(1)}/>
                     <label for="snils" className="radioLable">Снилс</label>
                 </div>
                 <div className="radioBlock">
-                    <input type="radio" name="FileType" id="polis" className="radio" />
-                    <label for="polis" className="radioLable" >Полис</label>
-                </div>
-                <div className="radioBlock">
-                    <input type="radio" name="FileType" id="doc" className="radio" />
-                    <label for="doc" className="radioLable">Договор купли-продажи</label>
+                    <input type="radio" name="FileType" id="doc" className="radio" onClick={() => func(2)}/>
+                    <label for="doc" className="radioLable">Договора</label>
                 </div>
             </div>
         </div>

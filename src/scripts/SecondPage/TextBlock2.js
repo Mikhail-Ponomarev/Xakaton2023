@@ -5,7 +5,7 @@ function TextBlock2() {
     return(
         <p className="SecondPageText2">
             доступные форматы <br />
-            pdf, jpeg, jpg, png, docx, xlsx
+            pdf, jpeg, jpg, png, docx
         </p>
     )
 }
