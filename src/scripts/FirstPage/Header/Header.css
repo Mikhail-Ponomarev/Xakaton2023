@@ -1,4 +1,7 @@
 .Header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     display: flex;
     margin: 0px;
     padding-top: 40px;
@@ -8,6 +11,7 @@
     width: 100%;
     height: 115px;
     background: #090909;
+    z-index: 10;
 }
 
 .LeftBar {

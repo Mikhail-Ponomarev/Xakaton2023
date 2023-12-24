@@ -45,7 +45,6 @@ function InputFile(props) {
             const blob = new Blob([data], { type: 'application/pdf' });
             const url = URL.createObjectURL(blob);
             setPdfUrl(url)
-            // window.open(url);
           };
           reader.readAsArrayBuffer(binUrl);
         }

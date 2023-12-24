@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import FirstPage from "./FirstPage/FirstPage";
+import {FirstPage} from "./FirstPage/FirstPage";
 import SecondPage from "./SecondPage/SecondPage";
 const MyContext = React.createContext(0);
 

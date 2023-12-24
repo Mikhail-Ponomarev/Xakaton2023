@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./ThirdBlockStyles.css"
 import BlockText from "./BlockText";
 import ExampleHide from "./ExampleHide";
 import pic1 from "./User1.png"
 import pic2 from "./ 1.png"
 import TextBlock from "./TextBlock"
+import { Context3 } from "../FirstPage";
 
 const Context = React.createContext(null)
 
@@ -13,7 +14,7 @@ function ThridBlock() {
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const [style, setStyle] = useState("CircleUp")
-
+    const ref = useContext(Context3)
     const [tmp, setTmp] = useState(0)
 
     function Click1() {
@@ -27,7 +28,7 @@ function ThridBlock() {
     }
 
     return(
-        <div className="ThridBlock">
+        <div className="ThridBlock" ref={ref}>
             <BlockText />
             <Context.Provider value={tmp}>
                 <ExampleHide />
