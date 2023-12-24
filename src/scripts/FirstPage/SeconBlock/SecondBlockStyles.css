@@ -1,4 +1,6 @@
 .SecondBlock {
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +17,7 @@
 }
 
 .ConstTxt {
+    z-index: 2;
     display: inline;
     margin: 0px;
     padding: 0px;
@@ -28,6 +31,7 @@
 }
 
 .white {
+    z-index: 2;
     display: inline;
     margin: 0px;
     padding: 0px;
@@ -41,6 +45,7 @@
 }
 
 .white_red {
+    z-index: 2;
     display: inline;
     padding: 0px;
     margin: 0px;
@@ -68,6 +73,7 @@
 }
 
 .txtBlock {
+    z-index: 2;
     display: block;
     width: auto;
     height: 94px;
@@ -75,6 +81,7 @@
 }
 
 .white {
+    z-index: 2;
     display: inline-block;
     width: auto;
     height: 65px;
@@ -87,6 +94,7 @@
 }
 
 .block {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     animation-name: TxtUp;
@@ -108,4 +116,34 @@
     } 100% {
         transform: translateY(-275px);
     }   
+}
+
+.gif {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.SecondPageText2 {
+    display: inline-block;
+    margin-top: 48px;
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 29.536px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
 }

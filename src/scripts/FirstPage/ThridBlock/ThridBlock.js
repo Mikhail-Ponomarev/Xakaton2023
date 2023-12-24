@@ -18,18 +18,12 @@ function ThridBlock() {
 
     function Click1() {
         setTmp(0)
-        ref1.current.classList.add('bg1')
-        ref1.current.classList.remove('bg2')
-        ref2.current.classList.add('bg2')
-        ref2.current.classList.remove('bg1')
+        setStyle("CircleUp")
     }
 
     function Click2() {
         setTmp(1)
-        ref2.current.classList.add('bg1')
-        ref2.current.classList.remove('bg2')
-        ref1.current.classList.add('bg2')
-        ref1.current.classList.remove('bg1')
+        setStyle("CircleDown")
     }
 
     return(
@@ -40,10 +34,10 @@ function ThridBlock() {
             </Context.Provider>
             <div className="TwoButtons">
                 <div className={style}></div>
-                <div className="Data bg1" ref={ref1} onClick={Click1}>
+                <div className="Data" ref={ref1} onClick={Click1}>
                     <img className="picData" src={pic1}/>
                 </div>
-                <div className="Data2 bg2" ref={ref2} onClick={Click2}>
+                <div className="Data2" ref={ref2} onClick={Click2}>
                     <img className="picData" src={pic2}/>
                 </div>
             </div>
