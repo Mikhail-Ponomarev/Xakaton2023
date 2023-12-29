@@ -111,3 +111,18 @@
 .hide {
     display: none;
 }
+
+.BottomBorder2 {
+    width: 14.32px;
+    height: 14.32px;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 2px solid #FFF;
+}
+
+.NoBottomBorder2 {
+    width: 14.32px;
+    height: 14.32px;
+    margin: 0px;
+    padding: 0px;
+}

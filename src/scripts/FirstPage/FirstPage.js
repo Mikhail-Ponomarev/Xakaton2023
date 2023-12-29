@@ -10,10 +10,12 @@ import "./FirstPageStyles.css"
 
 const Context1 = React.createContext('')
 const Context2 = React.createContext('')
-const Context3 = React.createContext('')
-const Context4 = React.createContext('')
+const Context3 = React.createContext('')  
+const Context4 = React.createContext('') 
 const Context5 = React.createContext('')
 const Context6 = React.createContext('')
+const Context7 = React.createContext('')
+const Context8 = React.createContext('')
 
 function FirstPage() {
     const [tmp1, SetTmp1] = useState(0)
@@ -21,8 +23,9 @@ function FirstPage() {
     const [tmp1Prev, SetTmp1Prev] = useState(0)
     const [tmp2Prev, SetTmp2Prev] = useState(0)
 
-    const ref1 = useRef(null)
-    const ref2 = useRef(null)
+    const ref1 = useRef(null) 
+    const ref2 = useRef(null) 
+
 
     useEffect(() => {
         if(tmp1 > tmp1Prev) {

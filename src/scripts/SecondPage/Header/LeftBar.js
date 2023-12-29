@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Header2.css"
 import Pic from "./Pic";
-
+import Line2 from "./Line2";
 
 function LeftBar() {
     const [value, setValue] = useState(0)
@@ -47,6 +47,7 @@ function LeftBar() {
                 <Pic value={value} figure={3} flag={flag2}/>
                 <Pic value={value} figure={4} flag={flag2}/>
                 <Pic value={value} figure={5} flag={flag2}/>
+                <Line2 />
             </div>
             <p className="txt">DEPERSONALIZE IT!</p>
         </div>
