@@ -1,22 +1,21 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./Header1.css"
 
 function Line() {
-    const [index, setIndex] = useState(0)
 
-    const mass = ['show', 'hide'];
+    const [tmp, setTmp] = useState(0)
+    const [style, setStyle] = useState("BottomBorder")
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setIndex((index + 1) % 2);
-          }, 500);
-      
-          return () => clearInterval(interval);
-    }, [index])
+            setStyle(prevStyle => prevStyle === "BottomBorder" ? "NoBottomBorder" : "BottomBorder");
+        }, 500);
+
+        return () => clearInterval(interval);
+    })
 
     return(
-        <div className="Pic">
-            <div className={mass[index]}></div>
-        </div>
+        <div className={style}></div>
     )
 }
 

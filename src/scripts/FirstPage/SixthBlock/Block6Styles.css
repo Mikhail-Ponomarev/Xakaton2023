@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("../../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../../fonts/Montserrat-Medium.ttf");
+}
+
 .Block6 {
     display: flex;
     flex-direction: column;
@@ -14,7 +29,7 @@
     padding: 0px;
     margin-top: 50px;
     color: #000000;
-    font-family: "Montserrat-SemiBold", Helvetica;
+    font-family: "Montserrat-SemiBold";
     font-size: 72px;
     font-weight: 600;
     left: 0;
@@ -24,7 +39,7 @@
 
 .inscr2 {
     color: #000000;
-    font-family: "Montserrat-Regular", Helvetica;
+    font-family: "Montserrat-Regular";
     font-size: 24px;
     font-weight: 400;
     margin: 0px;
@@ -64,7 +79,7 @@
 
 .ProgName {
     color: #000000;
-    font-family: "Montserrat-Medium", Helvetica;
+    font-family: "Montserrat-Medium";
     font-size: 56px;
     font-weight: 500;
     margin: 0px;
@@ -73,7 +88,7 @@
 
 .ProgJob {
     color: #000000;
-    font-family: "Montserrat-Regular", Helvetica;
+    font-family: "Montserrat-Regular";
     font-size: 48px;
     font-weight: 400;
     margin: 0px;

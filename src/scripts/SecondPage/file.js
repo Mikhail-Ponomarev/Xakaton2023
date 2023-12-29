@@ -12,6 +12,7 @@ function InputFile(props) {
     const ref = useRef(null)
     const [style2, setStyle2] = useState("hide")
     const [style3, setStyle3] = useState("hide")
+    const [flag, setFlag] = useState(true)
 
     const mass = ['http://127.0.0.1:8000/upload_file/auto', 'http://127.0.0.1:8000/upload_file/snils', 'http://127.0.0.1:8000/upload_file/document']
 
@@ -23,34 +24,34 @@ function InputFile(props) {
         const tmp = event.target.files[0].type
         switch(tmp) {
             case "application/pdf": setIndex(0);
-                ref.current.disabled = false
+                setFlag(true)
                 setStyle3("hide")
                 setStyle("btn2")
                 break;
             case "image/png": setIndex(1);
                 setStyle3("hide")
-                ref.current.disabled = false
+                setFlag(true)
                 setStyle("btn2")
                 break;
             case "image/jpeg": setIndex(1);
                 setStyle3("hide")
-                ref.current.disabled = false
+                setFlag(true)
                 setStyle("btn2")
                 break;
             case "image/jpg": setIndex(1);
                 setStyle3("hide")
-                ref.current.disabled = false
+                setFlag(true)
                 setStyle("btn2")
                 break;
             case "application/vnd.openxmlformats-officedocument.wordprocessingml.document": setIndex(2);
                 setStyle3("hide")
-                ref.current.disabled = false
+                setFlag(true)
                 setStyle("btn2")
                 break;
             default: 
                     setStyle3("show2")
                     setStyle2("btn")
-                    ref.current.disabled = true
+                    setFlag(false)
                 break;
 
         }
@@ -61,8 +62,7 @@ function InputFile(props) {
         const formData = new FormData()
         formData.append('file_upload', data)
         try {
-            if(props.index >= 0) {
-                ref.current.disabled = false
+            if(props.index >= 0 && flag == true)  {
                 setStyle2("hide")
                 const endpoint = mass[props.index]
                 await fetch(endpoint, {
@@ -77,7 +77,6 @@ function InputFile(props) {
                   setBinUrl(url);
                 })
             } else {
-                ref.current.disabled = true
                 setStyle("btn")
                 setStyle2("show")
             }

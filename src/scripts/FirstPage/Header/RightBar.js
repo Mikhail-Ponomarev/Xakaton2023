@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Header.css"
+import "./Header1.css"
 import { MyContext } from "../../Main";
 
 function RightBar() {
@@ -11,8 +11,8 @@ function RightBar() {
     }
 
     return(
-        <div className="RightBar" onClick={HidePage}>
-            Обезличить
+        <div className="RightBar1" onClick={HidePage}>
+            <p className="CentralBarText">Обезличить</p>
         </div>
     )
 }

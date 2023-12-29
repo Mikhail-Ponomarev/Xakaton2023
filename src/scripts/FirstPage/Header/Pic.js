@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css"
+import "./Header1.css"
 import pic from "./UserCopy.png"
 import pic2 from "./AsteriskCopy.png"
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Header.css"
-import Pic from "./Pic";
-import Line from "./Line";
+import "./Header1.css"
+import Pic from "./Pic"
+import Line from "./Line"
 
 function LeftBar() {
     const [value, setValue] = useState(0)
@@ -33,7 +33,7 @@ function LeftBar() {
         } else {
             const interval = setInterval(() => {
                 setValue((value - 1));
-              }, 500);
+              }, 1000);
           
               return () => clearInterval(interval);
         }

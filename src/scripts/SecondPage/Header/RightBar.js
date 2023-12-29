@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Header.css"
+import "./Header2.css"
 import { MyContext } from "../../Main";
 
 function RightBar() {
@@ -12,7 +12,7 @@ function RightBar() {
 
     return(
         <div className="RightBar" onClick={HidePage}>
-            вернуться назад
+            <p className="CentralBarText">вернуться назад</p>
         </div>
     )
 }

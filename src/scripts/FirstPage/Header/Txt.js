@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css"
+import "./Header1.css"
 
 function Txt(props) {
     return (

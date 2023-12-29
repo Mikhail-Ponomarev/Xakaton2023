@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Txt from "./Txt";
-import "./Header.css"
+import "./Header1.css"
 import { Context1, Context2,  Context5, Context6} from "../FirstPage";
 
 function CentralBar() {
@@ -10,7 +10,7 @@ function CentralBar() {
     const tmp2 = useContext(Context6)
 
     return(
-        <div className="CentralBar">
+        <div className="CentralBar1">
             <Txt func={func1} value={tmp1} text={'О программе'}/>
             <Txt func={func2} value={tmp2} text={'О нас'}/>
         </div>

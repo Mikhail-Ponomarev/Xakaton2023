@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url("../../fonts/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Inter-Light";
+    src: url("../../fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("../../fonts/Montserrat-SemiBold.ttf");
+}
+
 .ExampleHide {
     display: flex;
     width: 100%;
@@ -55,7 +70,7 @@
 
 .PersonInfoText {
     color: #000;
-    font-family: Inter;
+    font-family: "Inter-SemiBold";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -74,7 +89,7 @@
     margin: 0px;
     padding: 0px;
     color: #000;
-    font-family: Inter;
+    font-family: "Inter-Light";
     font-size: 13px;
     font-style: normal;
     font-weight: 300;
@@ -84,7 +99,7 @@
 
 .PersonInfoText3 {
     color: #000;
-    font-family: Inter;
+    font-family: "Inter-SemiBold";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -126,7 +141,7 @@
 
 .TextBlockP {
     color: #000;
-    font-family: Montserrat;
+    font-family: "Montserrat-SemiBold";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;

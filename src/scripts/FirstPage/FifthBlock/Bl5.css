@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("../../fonts/Montserrat-SemiBold.ttf");
+}
+
 .Block5Styles {
     display: block;
     position: relative;
@@ -28,7 +33,7 @@
     top: 226px;
     left: 660px;
     color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
+    font-family: "Montserrat-SemiBold";
     font-size: 60px;
     font-weight: 600;
 }

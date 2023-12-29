@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
 .blockFile {
     position: relative;
     display: flex;
@@ -17,7 +22,9 @@
 }
 
 .FileLabel {
-    display: block;
+    display: flex;
+    text-align: center;
+    align-items: center;
     padding-top: 0px;
     position: absolute;
     top: 0px;
@@ -29,8 +36,8 @@
     background: #FF3434;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
-    font-size: 63.763px;
+    font-family: "Montserrat-Medium";
+    font-size: 55px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -50,8 +57,8 @@
     background: #B4B4B4;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
-    font-size: 63.763px;
+    font-family: "Montserrat-Medium";
+    font-size: 55px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -72,8 +79,8 @@
     background: #FF3434;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
-    font-size: 63.763px;
+    font-family: "Montserrat-Medium";
+    font-size: 55px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -109,7 +116,7 @@
     width: auto;
     height: auto;
     color: #000000;
-    font-family: "Montserrat-Medium", Helvetica;
+    font-family: "Montserrat-Medium";
     margin: 0px;
     padding: 0px;
     font-size: 48px;

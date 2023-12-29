@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../../fonts/Montserrat-Medium.ttf");
+}
+
 .SecondBlock {
     position: relative;
     z-index: 0;
@@ -23,7 +28,7 @@
     padding: 0px;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
+    font-family: "Montserrat-Medium";
     font-size: 54px;
     font-style: normal;
     font-weight: 500;
@@ -37,7 +42,7 @@
     padding: 0px;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
+    font-family: "Montserrat-Medium";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
@@ -51,7 +56,7 @@
     margin: 0px;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
+    font-family: "Montserrat-Medium";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
@@ -76,7 +81,7 @@
     z-index: 2;
     display: block;
     width: auto;
-    height: 94px;
+    height: 95px;
     overflow: hidden;
 }
 
@@ -86,7 +91,7 @@
     width: auto;
     height: 65px;
     margin-bottom: 5px;
-    font-family: Montserrat;
+    font-family: "Montserrat-Medium";
     font-size: 54px;
     font-style: normal;
     font-weight: 500;
@@ -98,10 +103,12 @@
     display: flex;
     flex-direction: column;
     animation-name: TxtUp;
+    animation-delay: 1s;
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-timing-function: linear;
+    padding-top: 13px;
 }
 
 @keyframes TxtUp {
@@ -112,9 +119,9 @@
     } 50% {
         transform: translateY(-130px);
     } 75% {
-        transform: translateY(-185px);
+        transform: translateY(-196px);
     } 100% {
-        transform: translateY(-275px);
+        transform: translateY(-285px);
     }   
 }
 
@@ -141,7 +148,7 @@
     margin-top: 48px;
     color: rgba(0, 0, 0, 0.50);
     text-align: center;
-    font-family: Montserrat;
+    font-family: "Montserrat-Medium";
     font-size: 29.536px;
     font-style: normal;
     font-weight: 100;
