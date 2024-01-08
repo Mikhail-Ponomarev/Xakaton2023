@@ -4,4 +4,92 @@
 .docx - application/vnd.openxmlformats-officedocument.wordprocessingml.document
 .jpeg - image/jpeg
 
-source venv/bin/activate
+const SubmitFrom = async (event) => {
+        event.preventDefault()
+        const formData = new FormData()
+        formData.append('file_upload', data)
+        try {
+            if(props.index >= 0 && flag == true)  {
+                setStyle2("hide")
+                setStyle3("hide")
+                setFlag(true)
+                setEndpointIndex(-1)
+                setStyle("btn")
+                ref1.current.checked = false
+                ref2.current.checked = false
+                ref3.current.checked = false
+                const endpoint = mass[props.index]
+                await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Access-Control-Allow-Credentials': true
+                    },
+                    body: formData
+                })
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = new Blob([blob]);
+                        setBinUrl(url);
+                    })
+                    .catch(error => {console.log(error)})
+            } else {
+                setStyle("btn")
+                setStyle2("show")
+                ref4.current.disabled = true
+            }
+        } catch(error) {
+            console.error(error)
+        }
+
+    }
+
+    const convertToPdf = () => {
+        if (binUrl) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const blob = new Blob([data], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            setPdfUrl(url)
+          };
+          reader.readAsArrayBuffer(binUrl);
+        }
+      };
+    
+      const convertToPng = () => {
+        if (binUrl) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const blob = new Blob([data], { type: 'image/png' });
+            const url = URL.createObjectURL(blob);
+            setPdfUrl(url)
+          };
+          reader.readAsArrayBuffer(binUrl);
+        }
+      };
+
+      const convertToDocx = () => {
+        if (binUrl) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const blob = new Blob([data], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
+            const url = URL.createObjectURL(blob);
+            setPdfUrl(url)
+          };
+          reader.readAsArrayBuffer(binUrl);
+        }
+      };
+
+      useEffect(() => {
+        if(index == 0) {
+            convertToPdf()
+        } else if (index == 1) {
+            convertToPng()
+        } else {
+            convertToDocx()
+        }
+    }, [binUrl])
+
+

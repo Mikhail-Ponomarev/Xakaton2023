@@ -10,14 +10,10 @@ function SecondPage() {
     const [flag, setFlag] = useState(false)
     const [style2, setStyle2] = useState("hide")
     const [style, setStyle] = useState("btn")
-
     const ref1 = useRef(null) // радиокнопка 1
     const ref2 = useRef(null) // радиокнопка 2
     const ref3 = useRef(null) // радиокнопка 3
     const ref4 = useRef(null) // кнопка отправки данных 
-
-    
-
     return(
         <div className="SecondPage">
             <Header />
