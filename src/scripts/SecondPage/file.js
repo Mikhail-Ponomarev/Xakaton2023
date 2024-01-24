@@ -106,7 +106,6 @@ function InputFile(props) {
         } catch(error) {
             console.error(error)
         }
-
     }
 
     return(
